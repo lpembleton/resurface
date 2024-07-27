@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
+dev.R
+Genotyping_pegard_etal_Alfalfa.txt
