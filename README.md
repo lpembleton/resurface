@@ -120,9 +120,6 @@ Until resurface is on CRAN and has its own separate DOI, please cite the followi
 > Theoretical and Applied Genetics, 131, 1891-1902, September 2018.
 > doi: [10.1007/s00122-018-3121-7](https://doi.org/10.1007/s00122-018-3121-7)
 
-Luke W. Pembleton, Courtney Inch, Rebecca C. Baillie, Michelle C. Drayton, Preeti Thakur, Yvonne O. Ogaji, German C. Spangenberg, John W. Forster, Hans D. Daetwyler, Noel O. I. Cogan (2018).
-Exploitation of data from breeding programs supports rapid implementation of genomic selection for key agronomic traits in perennial ryegrass.
-Theoretical and Applied Genetics, 131(9).
 
 ## Acknowledgments
 
