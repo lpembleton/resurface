@@ -31,8 +31,7 @@ resurface accepts input in two formats:
 -   A numeric matrix of allele frequencies (between 0 and 1) with sample IDs as row names, or
 -   A 2-column tibble with sample IDs in column 1 and a matrix-column of allele frequencies in column 2. Samples are across rows, and loci are down columns.
 
-> [!N
-> OTE] If you are unfamiliar with matrix-columns in tibbles, check out [Eric Scott's](https://github.com/Aariq) [blog post](https://ericrscott.com/posts/2020-12-11-matrix-columns/) 👈.
+> [!NOTE] If you are unfamiliar with matrix-columns in tibbles, check out [Eric Scott's](https://github.com/Aariq) [blog post](https://ericrscott.com/posts/2020-12-11-matrix-columns/) 👈.
 > Matrix-columns are an efficient way to include large numeric matrices within tibble-like structures, allowing you to perform all the dplyr operations on other columns that might contain metadata such as population or location.
 
 Missing data should be coded as `NA`.
@@ -59,8 +58,7 @@ This function take two additional parameters:
 
 `repl` Number of replicate runs for imputation accuracy calculation (default: 1).
 
-> [!W
-> ARNING] Calculating the correlation matrix between all pairwise loci is time-consuming.
+> [!WARNING] Calculating the correlation matrix between all pairwise loci is time-consuming.
 > Faster correlation methods exist but require no missing data.
 > If the `ld_knni_fast` method is used missing data will be temporarily replaced with the mean loci allele frequency for correlation calculations.
 > This can reduce imputation accuracy, especially in datasets with high missing data, while the impact is smaller in datasets with lower levels of missing data.
