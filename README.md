@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: sentence
----
-
 # resurface
 
 An R package for the imputation of genotypic allele frequencies using the LD-kNNi algorithm.
