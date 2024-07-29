@@ -81,8 +81,10 @@ Imputation accuracy (1 - RB): \~ 0.9496
 Run time: \~ 4 hours 48 minutes
 
 ``` r
+# Download Alfalfa dataset
+download.file("https://entrepot.recherche.data.gouv.fr/api/access/datafile/:persistentId?persistentId=doi:10.57745/D8Q141", destfile = "Genotyping_pegard_etal_Alfalfa.txt")
 Mt_data <- readr::read_table("Genotyping_pegard_etal_Alfalfa.txt")
-#For demonstration purposes and to reduce computation load only chromsome 1 is imputed
+# For demonstration purposes and to reduce computation load only chromsome 1 is imputed
 idx <- grepl("chr1_", Mt_data$Chr_Pos)
 Mt_geno_chr1 <- Mt_data[idx,-c(1:3)]
 Mt_geno_chr1 <- t(Mt_geno_chr1)
@@ -111,7 +113,7 @@ I would be excited to have contributions to this package.
 
 ## Citation
 
-Until resurface is on CRAN and has its own separate DOI, please cite the following paper and this github repo.
+Until resurface is on CRAN and has its own separate DOI, please cite the following paper (as its first demonstrated use) and this github repo.
 
 > *Exploitation of data from breeding programs supports rapid implementation of genomic selection for key agronomic traits in perennial ryegrass.*
 >
