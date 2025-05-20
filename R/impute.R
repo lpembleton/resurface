@@ -47,6 +47,7 @@ singlepoint_knni <- function(k = 20, l = 10, locus, geno, ld_order, ind, prop_l 
 
   d <- k_dist[k_idx]
   d[d == 0] <- 0.0001 # prevent weights becoming Inf in later calculations
+  d[is.na(d)] <- 0.0001 # those that had no pairwise comparisions of non missing genotype should have their NA dist recoded to 0.0001 to prevent downstream error 
 
   weighted_mu <- weighted.mean(x = geno[k_idx, locus], w = d^-1, na.rm = TRUE)
   weighted_sd <- sqrt(weighted_var(x = geno[k_idx, locus], w = d^-1))
