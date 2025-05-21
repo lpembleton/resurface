@@ -15,6 +15,7 @@
 #' @param prop_l due to missing data using l loci might not always be possible. prop_l is the the min prop of l loci required, or max non na loci will be used.
 #' @return An imputed genotype frequency.
 #' @import cli
+#' @importFrom stats weighted.mean rnorm
 #' @export
 singlepoint_knni <- function(k = 20, l = 10, locus, geno, ld_order, ind, prop_l = 0.5) {
   l_loci_matrix <- geno[, ld_order[1:l]] # gather the l closest loci based on LD
@@ -81,6 +82,7 @@ singlepoint_knni <- function(k = 20, l = 10, locus, geno, ld_order, ind, prop_l 
 #' @return Matrix of allele frequency genotype data containing imputed
 #'         genotype frequencies.
 #' @import foreach future doFuture dplyr zoo progressr
+#' @importFrom stats cor
 #' @export
 matrix_knni <- function(geno, k = 10, l = 6, cpus = 1, mem = 1, fast = FALSE) {
   future::plan(future::multisession, workers = cpus)

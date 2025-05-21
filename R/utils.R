@@ -41,6 +41,7 @@ parse_geno <- function(geno) {
 #'             Samples across rows, Loci down columns.
 #' @return Genotype matrix with any homozygous loci prefilled.
 #' @import cli
+#' @importFrom stats var
 #' @export
 check_geno <- function(geno) {
   if (!is.matrix(geno)) {
